@@ -148,11 +148,11 @@ $(function() {
 								$that.data('googleMarker')[params.id] = marker;
 							}
 
-							if($that.data('googleMarker').length == 1) {
+							if($that.data('googleMarker').length < 2) {
 								$that.data('googleMap').setCenter(results[0].geometry.location);
 								$that.data('googleMap').setZoom($that.data('googleMap').getZoom());
 							} else {
-								// $that.data('googleMap').fitBounds($that.data('googleBound'));
+								$that.data('googleMap').fitBounds($that.data('googleBound'));
 							}
 
 							var coords = {};
@@ -231,11 +231,11 @@ $(function() {
         				$this.data('googleMarker')[params.id] = marker;
         			}
 
-				if($this.data('googleMarker').length == 1) {
+				if($this.data('googleMarker').length < 2) {
 					$this.data('googleMap').setCenter(new google.maps.LatLng(params.coords[0], params.coords[1]));
 					$this.data('googleMap').setZoom($this.data('googleMap').getZoom());
 				} else {
-					// $this.data('googleMap').fitBounds($this.data('googleBound'));
+					$this.data('googleMap').fitBounds($this.data('googleBound'));
 				}
 
 				params.success({
