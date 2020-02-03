@@ -152,7 +152,7 @@ $(function() {
 								$that.data('googleMap').setCenter(results[0].geometry.location);
 								$that.data('googleMap').setZoom($that.data('googleMap').getZoom());
 							} else {
-								$that.data('googleMap').fitBounds($that.data('googleBound'));
+								// $that.data('googleMap').fitBounds($that.data('googleBound'));
 							}
 
 							var coords = {};
@@ -235,7 +235,7 @@ $(function() {
 					$this.data('googleMap').setCenter(new google.maps.LatLng(params.coords[0], params.coords[1]));
 					$this.data('googleMap').setZoom($this.data('googleMap').getZoom());
 				} else {
-					$this.data('googleMap').fitBounds($this.data('googleBound'));
+					// $this.data('googleMap').fitBounds($this.data('googleBound'));
 				}
 
 				params.success({
